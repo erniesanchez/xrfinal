@@ -18,10 +18,14 @@
         <audio id="" src="" preload="auto"></audio>
       </a-assets>
       
-      <a-sky src="#sky" radius="80" phi-start="-235"></a-sky>
+      <a-sky src="#sky" radius="80" phi-start="-235">
+        <a-entity gltf-model="#title" position="0 2 100" rotation="0 90 0" scale="2 2 2"></a-entity>
+      </a-sky>
       <a-camera position="0 0 200"></a-camera>
       <a-entity gltf-model="#title" position="0 0 0" rotation="0 -90 0"></a-entity>
-      <a-entity web-portal="url:https://www.ernie-sanchez.com; text:Example"></a-entity>
+      <a-entity web-portal="url:https://aframe.io; text:Example" enableFrame="true" width="1.5" height="2.4" frameWidth=".15" rotation="0 90 0"></a-entity>
+
+      
 
       
     
