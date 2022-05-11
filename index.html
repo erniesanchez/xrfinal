@@ -18,14 +18,15 @@
       <a-assets>
         <img id="sky" src="img/sky.jpeg">
         <a-asset-item id="title" src="models/title.gltf"></a-asset-item>
-        <audio id="wind" src="wind.mp3" preload="auto"></audio>
+        <audio id="wind" src="sound/wind.mp3" preload="auto"></audio>
       </a-assets>
       
       <a-sky src="#sky" radius="120" phi-start="-235">
-        <a-entity gltf-model="#title" position="0 4 150" rotation="0 90 0" scale="8 8 8"></a-entity>
+        <a-entity gltf-model="#title" position="0 4 150" rotation="0 90 0" scale="8 8 8"></a-entity> 
+        
       </a-sky>
       <a-camera position="0 0 200"></a-camera>
-      <a-entity id="river" position="-10 0 0" sound="src: #wind; autoplay: true"></a-entity>
+      <a-sound src="wind" autoplay="true" position="0 2 5"></a-sound>
       <a-entity gltf-model="#title" position="0 0 0" rotation="0 -90 0"></a-entity>
       <a-entity web-portal="url:https://aframe.io; text:Example" enableFrame="true" width="1.5" height="2.4" 
                 frameWidth=".15" rotation="0 90 0" enableWebsurface="true"></a-entity>
