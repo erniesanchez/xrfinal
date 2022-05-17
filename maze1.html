@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Maze Worlds">
+    <title>Maze Worlds</title>
+    
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.6.0/dist/aframe-look-at-component.min.js"></script> 
+    <script src="https://unpkg.com/aframe-maze-component@0.1.24/dist/aframe-maze-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <!-- <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script> -->
+    </head>
+
+  <body>
+    
+    <a-scene>
+      <a-assets>
+        <img id="texture-wall" src="img/arrow-left.png">
+        <img id="texture-floor" src="img/floor-texture-1.jpg">
+        <a-box id="wall-one" 
+          static-body material="src: #texture-wall" 
+          depth="1" width="4" height="1"></a-box>
+        <a-cylinder id="end-cap"
+          static-body color="#444444" 
+          depth="1.1" width="1.1" height="2"
+          radius="0.5"></a-cylinder>
+     </a-assets>
+        <!-- <a-entity environment="preset: dream; dressingAmount: 500"></a-entity> -->
+        <a-entity id="player"
+          camera
+          universal-controls
+          kinematic-body
+          position="-20 10.8 20">
+      </a-entity>
+      <a-entity id="maze4" 
+          maze='size: 4 5; wall: #wall-one; cap: #end-cap;' 
+          position='10 0.5 30'></a-entity>
+          
+
+      
+      
+      
+      
+
+     </a-scene>
+  </body>
+ 
+</html>

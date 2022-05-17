@@ -9,13 +9,35 @@
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-web-portals@1.0.1/dist/aframe-web-portals.umd.js"></script>
-   
+    <script>
+      document.addEventListener("DOMContentLoaded", function (event) {
+          const click = document.getElementById('click');
+          // Have to initialize via a user event
+          document.addEventListener('click', () => {
+              click.parentNode && click.parentNode.removeChild(click);
+          });
+      });
+ </script>
+ <style>
+  #click {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 10;
+      transform: translate(-50%, -50%);
+
+      text-shadow: 0 1px 0 #FFF;
+      background: rgba(255, 255, 255, 0.75);
+      color: #000;
+      padding: 0.5em 1em;
+      border-radius: 3px;
+  }
+</style>
+  
 </head>
 
-    
-  </head>
   <body>
-    
+    <div id="click">Click to start experience</div>
     <a-scene>
       <a-assets>
         <img id="sky" src="img/sky.jpeg">
@@ -27,15 +49,15 @@
         <a-entity gltf-model="#title" position="0 4 150" rotation="0 90 0" scale="8 8 8"></a-entity> 
       </a-sky>
       <a-camera position="0 0 200"></a-camera>
-      <a-sound src="#wind" autoplay="true" volume="5"></a-sound>
-      <a-entity gltf-model="#title" position="0 0 0" rotation="0 -90 0"></a-entity>
+      <a-sound src="#wind" autoplay="true" volume="1"></a-sound>
+      <a-entity gltf-model="#title" position="-2 3 0" rotation="0 -90 0"></a-entity>
       <a-entity
-        position="-3 0 -6"
-        web-portal="url:http://aframe.io; text:Aframe;"
+        position="-4 -2 0"
+        web-portal="url:http://aframe.io; width: 2.5; height: 3.5; text:Maze One;"
       ></a-entity>
       <a-entity
-        position="0 0 -6"
-        web-portal="url:http://app.webaverse.com; text:Webaverse;"></a-entity>
+        position="1 -2 0"
+        web-portal="url:http://app.webaverse.com; width: 2.5; height: 3.5; text:Maze Two;"></a-entity>
       
 
      </a-scene>
