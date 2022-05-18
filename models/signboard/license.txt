@@ -1,0 +1,11 @@
+Model Information:
+* title:	Signboard
+* source:	https://sketchfab.com/3d-models/signboard-a42f7d620f354068b2fd3c1e944def81
+* author:	Ekaterina (https://sketchfab.com/kattynote)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Signboard" (https://sketchfab.com/3d-models/signboard-a42f7d620f354068b2fd3c1e944def81) by Ekaterina (https://sketchfab.com/kattynote) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
