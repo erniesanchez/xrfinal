@@ -9,8 +9,8 @@
     <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.6.0/dist/aframe-look-at-component.min.js"></script> 
     <script src="https://unpkg.com/aframe-maze-component@0.1.24/dist/aframe-maze-component.min.js"></script>
-    
-    <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+    <!-- <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script> -->
+
   
     </head>
 
@@ -18,31 +18,20 @@
     
     <a-scene>
       <a-assets>
+        <a-box id="wall-one" static-body material="src: #texture-wall" depth="1" width="6" height="10"></a-box>
+        <a-cylinder id="end-cap" static-body color="#31410b" depth="1.1" width="1.1" height="10" radius=".5"></a-cylinder>
         <img id="texture_sky" src="img/sky-maze1.jpeg">
         <img id="texture-wall" src="img/wall1.png">
         <img id="texture-floor" src="img/floor1.jpeg">
         <a-asset-item id="sign" src="models/signboard/sign.gltf"></a-asset-item>
-        <a-box id="wall-one" 
-          static-body material="src: #texture-wall" 
-          depth="1" width="6" height="10"></a-box>
-        <a-cylinder id="end-cap"
-          static-body color="#31410b" 
-          depth="1.1" width="1.1" height="10"
-          radius=".5"></a-cylinder>
-     </a-assets>
-        <a-sky src="#texture_sky"></a-sky>
-        <a-entity gltf-model="#sign" scale="0.01 0.01 0.01" position="-30 0 20"></a-entity>
-        <a-entity id="player"
-          camera
-          universal-controls
-          kinematic-body
-          position="-20 2 20">
-         </a-entity>
-         <a-entity id="maze1" maze='size: 6 8; wall: #wall-one; cap: #end-cap; open: S 0 N 4;' 
-                position='0 0.5 -5'></a-entity>
-          <a-grid id="ground" width="200" height="200" static-body material="src: #texture-floor"></a-grid>
-
-
+      </a-assets>
+      
+      <a-sky src="#texture_sky"></a-sky>
+      <a-entity id="player" camera universal-controls kinematic-body position="-20 2 40"></a-entity>
+      <a-entity id="maze1" maze='size: 6 8; wall: #wall-one; cap: #end-cap; open: S 0 N 4;' 
+                position='0 0.5 -5' rotation="0 -25 0"></a-entity>
+      <a-grid id="ground" width="200" height="200" static-body material="src: #texture-floor"></a-grid>
+      <a-entity gltf-model="#sign" scale="0.01 0.01 0.01" position="-30 0 20"></a-entity>
       
       
       
