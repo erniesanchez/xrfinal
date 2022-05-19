@@ -24,11 +24,11 @@
         <a-asset-item id="sign" src="models/signboard/sign.gltf"></a-asset-item>
         <a-box id="wall-one" 
           static-body material="src: #texture-wall" 
-          depth="1" width="4" height="6"></a-box>
+          depth="1" width="6" height="10"></a-box>
         <a-cylinder id="end-cap"
           static-body color="#31410b" 
-          depth="1.1" width="1.1" height="6"
-          radius="0.5"></a-cylinder>
+          depth="1.1" width="1.1" height="10"
+          radius=".5"></a-cylinder>
      </a-assets>
         <!-- <a-entity environment="preset: dream; dressingAmount: 500"></a-entity> -->
         <a-sky src="#texture_sky"></a-sky>
@@ -37,10 +37,10 @@
           camera
           universal-controls
           kinematic-body
-          position="-20 10.8 20">
+          position="-20 2 20">
       </a-entity>
       <a-entity id="maze1" maze='size: 6 8; wall: #wall-one; cap: #end-cap; open: S 0 N 4;' 
-                position='-10 0.5 -5'></a-entity>
+                position='0 0.5 -5'></a-entity>
       <a-grid id="ground" width="200" height="200" static-body material="src: #texture-floor"></a-grid>
 
 
