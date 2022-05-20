@@ -1,0 +1,11 @@
+Model Information:
+* title:	Lion Statue from Legio
+* source:	https://sketchfab.com/3d-models/lion-statue-from-legio-396348c4de454e5c841cc878ed240bbf
+* author:	Jezreel Valley Regional Project (https://sketchfab.com/jvrp)
+
+Model License:
+* license type:	CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions can not be distributed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Lion Statue from Legio" (https://sketchfab.com/3d-models/lion-statue-from-legio-396348c4de454e5c841cc878ed240bbf) by Jezreel Valley Regional Project (https://sketchfab.com/jvrp) licensed under CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)
