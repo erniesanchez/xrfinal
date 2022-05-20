@@ -5,7 +5,6 @@
     <meta name="description" content="Maze Worlds">
     <title>Maze Worlds</title>
     <link rel="stylesheet" href="css/style.css">
-    <!-- <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-web-portals@1.0.1/dist/aframe-web-portals.umd.js"></script>
@@ -17,50 +16,47 @@
               click.parentNode && click.parentNode.removeChild(click);
           });
       });
- </script>
- <style>
-  #click {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      z-index: 10;
-      transform: translate(-50%, -50%);
+    </script>
+    <style>
+      #click {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 10;
+        transform: translate(-50%, -50%);
 
-      text-shadow: 0 1px 0 #FFF;
-      background: rgba(255, 255, 255, 0.75);
-      color: #000;
-      padding: 0.5em 1em;
-      border-radius: 3px;
-  }
-</style>
-  
-</head>
+        text-shadow: 0 1px 0 #FFF;
+        background: rgba(255, 255, 255, 0.75);
+        color: #000;
+        padding: 0.5em 1em;
+        border-radius: 3px;
+      }
+    </style>
+  </head>
 
   <body>
-    <div id="click">Click to start experience</div>
+    <div id="click">Click to Enter Maze Worlds</div>
     <a-scene>
       <a-assets>
-        <img id="sky" src="img/sky.jpeg">
+        <img id="space" src="img/space.jpeg">
         <a-asset-item id="title" src="models/title.gltf"></a-asset-item>
         <audio id="wind" src="sound/wind.mp3" preload="auto"></audio>
+        <img id="texture-plane" src="img/desert.jpeg">
       </a-assets>
-      
-      <a-sky src="#sky" radius="100" phi-start="-235">
-        <a-entity gltf-model="#title" position="0 4 150" rotation="0 90 0" scale="8 8 8"></a-entity> 
-      </a-sky>
-      <a-camera position="0 0 200"></a-camera>
-      <a-sound src="#wind" autoplay="true" volume="1"></a-sound>
-      <a-entity gltf-model="#title" position="-2 3 0" rotation="0 -90 0"></a-entity>
-      <a-entity
-        position="-4 -2 0"
-        web-portal="url:http://aframe.io; width: 2.5; height: 3.5; text:Maze One;"
-      ></a-entity>
-      <a-entity
-        position="1 -2 0"
-        web-portal="url:http://app.webaverse.com; width: 2.5; height: 3.5; text:Maze Two;"></a-entity>
-      
+        
+      <a-sky src="#space"></a-sky>
+      <a-plane rotation="-90 0 0" width="160" height="50" material="src: #texture-plane"></a-plane>
+      <a-entity id="player" position="0 1.6 25" camera wasd-controls="acceleration: 15;" look-controls="pointerLockEnabled: false">
+          <a-cursor position="0 0 -.05" scale=".04 .04 1"></a-cursor>
+          <a-cylinder radius="0.75"></a-cylinder></a-entity>
+      <a-entity position="-5 .1 -8" rotation="0 15 0" web-portal="url:maze1.html; text:?;"></a-entity>
+      <a-entity position="5 .1 -8" rotation="0 -15 0" web-portal="url:https://app.webaverse.com; text:?;"></a-entity>
+      <a-entity gltf-model="#title" scale="5 5 5" position="-.05 8 -15" rotation="0 -90 0"></a-entity>
 
-     </a-scene>
+      <!-- <a-entity position="-5 .1 -8" rotation="0 15 0" web-portal="url:https://aframe.io; text:?;"></a-entity> -->
+
+       
+    </a-scene>
   </body>
  
 </html>
