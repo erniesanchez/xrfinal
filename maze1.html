@@ -24,14 +24,17 @@
         <img id="texture-wall" src="img/wall1.png">
         <img id="texture-floor" src="img/floor1.jpeg">
         <a-asset-item id="sign" src="models/signboard/sign.gltf"></a-asset-item>
+        <a-asset-item id="aphrodite" src="models/entrance_statue/aphrodite.gltf"></a-asset-item>
+
       </a-assets>
       
       <a-sky src="#texture_sky"></a-sky>
-      <a-entity id="player" camera universal-controls kinematic-body position="-20 2 40"></a-entity>
+      <a-entity id="player" camera universal-controls kinematic-body position="-20 2 40" rotation="0 85 0"></a-entity>
       <a-entity id="maze1" maze='size: 6 8; wall: #wall-one; cap: #end-cap; open: S 0 N 4;' 
-                position='0 0.5 -5' rotation="0 -25 0"></a-entity>
+                position='-100 .05 20' rotation="0 80 0"></a-entity>
       <a-grid id="ground" width="200" height="200" static-body material="src: #texture-floor"></a-grid>
-      <a-entity gltf-model="#sign" scale="0.01 0.01 0.01" position="-30 0 20"></a-entity>
+      <a-entity gltf-model="#sign" scale="0.01 0.01 0.01" position="-30 0 50"></a-entity>
+      <a-entity gltf-model="#aphrodite" scale="0 0 0" position="-27 6 0" rotation="0 55 0"></a-entity>
       
       
       
