@@ -23,7 +23,7 @@
         <img id="texture_sky" src="img/sky-maze1.jpeg">
         <img id="texture-wall" src="img/wall1.png">
         <img id="texture-floor" src="img/floor1.jpeg">
-        <audio id="welcome" src="sound/welcome.mp3" preload="auto"></audio>
+        <audio id="welcome" src="sound/welcome.mp3"></audio>
         <a-asset-item id="sign" src="models/signboard/sign.gltf"></a-asset-item>
         <a-asset-item id="aphrodite" src="models/entrance_statue/aphrodite.gltf"></a-asset-item>
         <a-asset-item id="lion" src="models/lion_statue/lion.gltf"></a-asset-item>
@@ -42,7 +42,9 @@
       <a-entity gltf-model="#sign" scale="0.01 0.01 0.01" position="-15 0 44" rotation="0 94 0"></a-entity>
       <a-entity gltf-model="#aphrodite" scale=".25 .25 .25" position="-46 5 40" rotation="0 90 0"></a-entity>
       <a-entity gltf-model="#aphrodite" scale=".25 .25 .25" position="-45 5 46.5" rotation="0 90 0"></a-entity>
-      <a-entity gltf-model="#lion" scale="2 2 2" position="-14 .5 43" rotation="0 90 0" sound="src: url(#welcome); on: click"></a-entity>
+      <a-entity gltf-model="#lion" scale="2 2 2" position="-14 .5 43" rotation="0 90 0">
+          <a-cylinder color="#000" sound="src: #welcome; on: click"></a-cylinder>
+      </a-entity>
       <a-entity gltf-model="#moon" scale="22 22 22" position="-70 40 0" rotation="0 200 0" animation-mixer></a-entity>
       <a-entity gltf-model="#towers" scale=".25 .25 .25" position="-50 0 80" rotation="0 50 0" animation-mixer></a-entity>
       <a-entity gltf-model="#towers" scale=".1 .1 .1" position="-80 0 -50" rotation="0 0 0" animation-mixer></a-entity>
