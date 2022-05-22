@@ -40,8 +40,8 @@
     <a-scene>
       <a-assets>
         <img id="space" src="img/space.jpeg">
+        <audio id="ambient" src="sound/ambient_main.mp3"></audio>
         <a-asset-item id="title" src="models/title.gltf"></a-asset-item>
-        <audio id="wind" src="sound/wind.mp3" preload="auto"></audio>
         <img id="texture-plane" src="img/desert.jpeg">
       </a-assets>
         
@@ -51,11 +51,10 @@
           <a-cursor position="0 0 -.05" scale=".04 .04 1"></a-cursor>
           <a-cylinder radius="0.75"></a-cylinder></a-entity>
       <a-entity position="-5 .1 -8" rotation="0 15 0" web-portal="url:maze1.html; text:?;"></a-entity>
-      <a-entity position="5 .1 -8" rotation="0 -15 0" web-portal="url:https://app.webaverse.com; text:?;"></a-entity>
+      <a-entity position="5 .1 -8" rotation="0 -15 0" web-portal="url:*; text:?;"></a-entity>
       <a-entity gltf-model="#title" scale="5 5 5" position="-.05 8 -15" rotation="0 -90 0"></a-entity>
 
-      
-      <a-sound src="sound/wind.mp3" autoplay="true" volume="1"></a-sound>
+      <a-sound src="#ambient" autoplay="true" volume="3" loop="true"></a-sound>
        
     </a-scene>
   </body>
