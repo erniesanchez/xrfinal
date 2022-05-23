@@ -26,7 +26,7 @@
         <audio id="welcome" src="sound/welcome.mp3"></audio>
         <audio id="statue_one" src="sound/statue_one.mp3"></audio>
         <audio id="statue_two" src="sound/staue_two.mp3"></audio>
-        <audio id="maze_one" src="sound/staue_two.mp3"></audio>
+        <audio id="maze_one" src="sound/ambient_maze1.wav"></audio>
         <a-asset-item id="sign" src="models/signboard/sign.gltf"></a-asset-item>
         <a-asset-item id="aphrodite" src="models/entrance_statue/aphrodite.gltf"></a-asset-item>
         <a-asset-item id="lion" src="models/lion_statue/lion.gltf"></a-asset-item>
@@ -51,13 +51,16 @@
                 sound="src: #statue_two; on: click; volume: 3"></a-box>
       </a-entity>
       <a-entity gltf-model="#lion" scale="2 2 2" position="-14 .5 43" rotation="0 90 0">
-          <a-box color="#000" width=".3" height=".7" rotation="0 40 0" material="opacity: 0.0; transparent: true"
-          sound="src: #welcome; on: click"></a-box>
+          <a-box static-body color="#000" width=".3" height=".7" rotation="0 40 0" material="opacity: 0.0; transparent: true"
+          sound="src: #welcome; on: click" sound="src: #maze_one; on: click"></a-box>
       </a-entity>
       <a-entity gltf-model="#moon" scale="22 22 22" position="-70 40 0" rotation="0 200 0" animation-mixer></a-entity>
       <a-entity gltf-model="#towers" scale=".25 .25 .25" position="-50 0 80" rotation="0 50 0" animation-mixer></a-entity>
       <a-entity gltf-model="#towers" scale=".1 .1 .1" position="-80 0 -50" rotation="0 0 0" animation-mixer></a-entity>
       <a-entity gltf-model="#towers" scale=".1 .1 .1" position="-100 0 -42" rotation="0 0 0" animation-mixer></a-entity>
+      <a-box color="#000" width="6" height="25" position="-46 0 43.5" rotation="0 90 0" material="opacity: 0.0; transparent: true"
+             sound="src: #maze_one; on: click" loop="true">
+      </a-box>
       
      </a-scene>
   </body>

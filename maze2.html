@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Maze Worlds">
+    <title>Maze Two</title>
+    
+    <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.13.1/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.6.0/dist/aframe-look-at-component.min.js"></script> 
+    <script src="https://unpkg.com/aframe-maze-component@0.1.24/dist/aframe-maze-component.min.js"></script>
+    
+  
+    </head>
+
+  <body>
+    
+    <a-scene>
+      <a-assets>
+        <a-box id="wall-two" static-body material="src: #texture-wall_two" depth="1" width="12" height="10"></a-box>
+        <a-cylinder id="end-cap" static-body color="#000" depth="1.1" width="1.1" height="10" radius=".5"></a-cylinder>
+        <img id="texture_sky_two" src="img/sky-maze2.jpeg">
+        <img id="texture-wall_two" src="img/floor2.png">
+        <img id="texture-floor_two" src="img/wall2.jpeg">
+        <audio id="welcome" src="sound/welcome.mp3"></audio>
+        <audio id="statue_one" src="sound/statue_one.mp3"></audio>
+        <audio id="statue_two" src="sound/staue_two.mp3"></audio>
+        <audio id="maze_one" src="sound/ambient_maze1.wav"></audio>
+        <a-asset-item id="sign" src="models/signboard/sign.gltf"></a-asset-item>
+        <a-asset-item id="aphrodite" src="models/entrance_statue/aphrodite.gltf"></a-asset-item>
+        <a-asset-item id="lion" src="models/lion_statue/lion.gltf"></a-asset-item>
+        <a-asset-item id="moon" src="models/moon/moon.gltf"></a-asset-item>
+        <a-asset-item id="towers" src="models/towers/towers.gltf"></a-asset-item>
+      </a-assets>
+      
+      <a-sky src="#texture_sky_two"></a-sky>
+      <a-entity id="player" camera universal-controls kinematic-body position="-10 2 20" rotation="1 10 0">
+        <a-entity cursor="fuse: true; fuseTimeout: 500" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+                   material="color: black; shader: flat"></a-entity>
+      </a-entity>
+      <a-entity id="maze1" maze='size: 6 8; wall: #wall-two; cap: #end-cap; open: S 0 N 4;' position='-70 5.05 32' rotation="0 98 0"></a-entity>
+      <a-grid id="ground" width="200" height="200" static-body material="src: #texture-floor_two"></a-grid>
+      <a-entity gltf-model="#sign" scale="0.01 0.01 0.01" position="-15 0 44" rotation="0 94 0"></a-entity>
+     
+     
+     
+      
+     </a-scene>
+  </body>
+ 
+</html>
