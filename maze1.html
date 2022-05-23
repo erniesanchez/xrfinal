@@ -25,6 +25,8 @@
         <img id="texture-floor" src="img/floor1.jpeg">
         <audio id="welcome" src="sound/welcome.mp3"></audio>
         <audio id="statue_one" src="sound/statue_one.mp3"></audio>
+        <audio id="statue_two" src="sound/staue_two.mp3"></audio>
+        <audio id="maze_one" src="sound/staue_two.mp3"></audio>
         <a-asset-item id="sign" src="models/signboard/sign.gltf"></a-asset-item>
         <a-asset-item id="aphrodite" src="models/entrance_statue/aphrodite.gltf"></a-asset-item>
         <a-asset-item id="lion" src="models/lion_statue/lion.gltf"></a-asset-item>
@@ -41,10 +43,13 @@
       <a-grid id="ground" width="200" height="200" static-body material="src: #texture-floor"></a-grid>
       <a-entity gltf-model="#sign" scale="0.01 0.01 0.01" position="-15 0 44" rotation="0 94 0"></a-entity>
       <a-entity gltf-model="#aphrodite" scale=".25 .25 .25" position="-46 5 40" rotation="0 90 0">
-                <a-box color="#000" width="2" height="2" rotation="0 40 0"
-                sound="src: #statue_one; on: click"></a-box>
+                <a-box color="#000" width="10" height="50" position="0 0 18" rotation="0 0 0" material="opacity: 0.0; transparent: true"
+                sound="src: #statue_one; on: click; volume: 3"></a-box>
       </a-entity>
-      <a-entity gltf-model="#aphrodite" scale=".25 .25 .25" position="-45 5 46.5" rotation="0 90 0"></a-entity>
+      <a-entity gltf-model="#aphrodite" scale=".25 .25 .25" position="-45 5 46.5" rotation="0 90 0">
+                <a-box color="#000" width="10" height="50" position="0 0 18" rotation="0 0 0" material="opacity: 0.0; transparent: true"
+                sound="src: #statue_two; on: click; volume: 3"></a-box>
+      </a-entity>
       <a-entity gltf-model="#lion" scale="2 2 2" position="-14 .5 43" rotation="0 90 0">
           <a-box color="#000" width=".3" height=".7" rotation="0 40 0" material="opacity: 0.0; transparent: true"
           sound="src: #welcome; on: click"></a-box>
@@ -53,8 +58,6 @@
       <a-entity gltf-model="#towers" scale=".25 .25 .25" position="-50 0 80" rotation="0 50 0" animation-mixer></a-entity>
       <a-entity gltf-model="#towers" scale=".1 .1 .1" position="-80 0 -50" rotation="0 0 0" animation-mixer></a-entity>
       <a-entity gltf-model="#towers" scale=".1 .1 .1" position="-100 0 -42" rotation="0 0 0" animation-mixer></a-entity>
-      <a-box color="#000" width="2" height="2" rotation="0 40 0"
-      sound="src: #statue_one; on: click"></a-box>
       
      </a-scene>
   </body>
