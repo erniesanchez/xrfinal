@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cardboard Cloud Platform
+* source:	https://sketchfab.com/3d-models/cardboard-cloud-platform-487e62f1a14a40b2ba2217eee79efd1e
+* author:	Kyla Burgess (https://sketchfab.com/KylaBurgess)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cardboard Cloud Platform" (https://sketchfab.com/3d-models/cardboard-cloud-platform-487e62f1a14a40b2ba2217eee79efd1e) by Kyla Burgess (https://sketchfab.com/KylaBurgess) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
