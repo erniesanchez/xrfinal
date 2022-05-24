@@ -22,25 +22,23 @@
         <img id="texture_sky_two" src="img/sky-maze2.jpeg">
         <img id="texture-wall_two" src="img/floor2.png">
         <img id="texture-floor_two" src="img/wall2.jpeg">
-        <audio id="welcome" src="sound/welcome.mp3"></audio>
-        <audio id="statue_one" src="sound/statue_one.mp3"></audio>
-        <audio id="statue_two" src="sound/staue_two.mp3"></audio>
-        <audio id="maze_one" src="sound/ambient_maze1.wav"></audio>
-        <a-asset-item id="sign" src="models/signboard/sign.gltf"></a-asset-item>
-        <a-asset-item id="aphrodite" src="models/entrance_statue/aphrodite.gltf"></a-asset-item>
-        <a-asset-item id="lion" src="models/lion_statue/lion.gltf"></a-asset-item>
-        <a-asset-item id="moon" src="models/moon/moon.gltf"></a-asset-item>
-        <a-asset-item id="towers" src="models/towers/towers.gltf"></a-asset-item>
+        <a-asset-item id="clock" src="models/clock_in_the_shape_of_obelisk/clock.gltf"></a-asset-item>
+
+        
+       
       </a-assets>
       
       <a-sky src="#texture_sky_two"></a-sky>
-      <a-entity id="player" camera universal-controls kinematic-body position="-10 2 20" rotation="1 10 0">
-        <a-entity cursor="fuse: true; fuseTimeout: 500" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
-                   material="color: black; shader: flat"></a-entity>
+      <a-entity id="player" camera universal-controls kinematic-body position="20 2 20" rotation="1 120 0">
+        <a-entity cursor="fuse: true; fuseTimeout: 500" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.005; radiusOuter: 0.01"
+                   material="color: #000; shader: flat"></a-entity>
       </a-entity>
-      <a-entity id="maze1" maze='size: 6 8; wall: #wall-two; cap: #end-cap; open: S 0 N 4;' position='-70 5.05 32' rotation="0 98 0"></a-entity>
+      <a-entity id="maze1" maze='size: 6 8; wall: #wall-two; cap: #end-cap; open: S 0 N 4;' position='-70 5.05 32' rotation="0 98 0">
+                <a-entity gltf-model="#clock" scale=".5 .5 .5" position="-20 0 47" rotation="0 0 0"></a-entity>
+      </a-entity>
       <a-grid id="ground" width="200" height="200" static-body material="src: #texture-floor_two"></a-grid>
-      <a-entity gltf-model="#sign" scale="0.01 0.01 0.01" position="-15 0 44" rotation="0 94 0"></a-entity>
+ 
+
      
      
      

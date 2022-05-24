@@ -19,7 +19,7 @@
     <a-scene>
       <a-assets>
         <a-box id="wall-one" static-body material="src: #texture-wall" depth="1" width="6" height="10"></a-box>
-        <a-cylinder id="end-cap" static-body color="#31410b" depth="1.1" width="1.1" height="10" radius=".5"></a-cylinder>
+        <a-cylinder id="end-cap" static-body color="#31410b" depth="1.1" width="1.1" height="10" radius="1.5"></a-cylinder>
         <img id="texture_sky" src="img/sky-maze1.jpeg">
         <img id="texture-wall" src="img/wall1.png">
         <img id="texture-floor" src="img/floor1.jpeg">
@@ -36,7 +36,7 @@
       
       <a-sky src="#texture_sky"></a-sky>
       <a-entity id="player" camera universal-controls kinematic-body position="-10 2 40" rotation="1 85 0">
-        <a-entity cursor="fuse: true; fuseTimeout: 500" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+        <a-entity cursor="fuse: true; fuseTimeout: 500" position="0 0 -1" geometry="primitive: ring; radiusInner: 0.005; radiusOuter: 0.01"
                    material="color: black; shader: flat"></a-entity>
       </a-entity>
       <a-entity id="maze1" maze='size: 6 8; wall: #wall-one; cap: #end-cap; open: S 0 N 4;' position='-70 5.05 32' rotation="0 98 0"></a-entity>
