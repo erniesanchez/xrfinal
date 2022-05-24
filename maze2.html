@@ -24,6 +24,7 @@
         <img id="texture-floor_two" src="img/wall2.jpeg">
         <audio id="ambient_maze2" src="sound/maze2_sound.wav"></audio>
         <audio id="eyebeast_voice" src="sound/eyebeast_voice.mp3"></audio>
+        <audio id="angel_clock" src="sound/angel_clock.mp3"></audio>
         <a-asset-item id="clock" src="models/clock_in_the_shape_of_obelisk/clock.gltf"></a-asset-item>
         <a-asset-item id="eyebeast" src="models/eyebeast/eyebeast.gltf"></a-asset-item>
         <a-asset-item id="geometry" src="models/geometry_texture/geometry.gltf"></a-asset-item>        
@@ -36,7 +37,10 @@
                   material="color: #000; shader: flat"></a-entity>
       </a-entity>
       <a-entity id="maze1" maze='size: 6 8; wall: #wall-two; cap: #end-cap; open: S 0 N 4;' position='-70 5.05 32' rotation="0 98 0">
-                <a-entity gltf-model="#clock" scale=".5 .5 .5" position="-20 0 47" rotation="0 0 0"></a-entity>
+                <a-entity gltf-model="#clock" scale=".5 .5 .5" position="-20 0 47" rotation="0 0 0">
+                  <a-box  static-body color="#000" width="16" height="25" depth="10" position="-1 0 6.5" rotation="0 0 0" material="opacity: 0.0; transparent: true"
+                  sound="src: #angel_clock; on: click; volume: 3"></a-box>
+                </a-entity>
                 <a-entity gltf-model="#clock" scale=".5 .5 .5" position="-35 0 45" rotation="0 -90 0"></a-entity>
                 <a-entity gltf-model="#clock" scale=".5 .5 .5" position="33.9 0 47" rotation="0 0 0"></a-entity>
                 <a-entity gltf-model="#clock" scale=".5 .5 .5" position="35 0 43.9" rotation="0 90 0"></a-entity>
@@ -47,9 +51,9 @@
                 </a-entity>
       </a-box> 
       <a-box  static-body width="1.5" height="1.5" depth="1.5" position="13 .9 30" rotation="0 130 0" material="src: #texture-wall_two"></a-box>
-      <a-entity gltf-model="#geometry" scale="1 1 1" position="0 1.7 0" rotation="0 5 0" animation-mixer></a-entity>
+      <a-entity gltf-model="#geometry" scale=".01 .01 .01" position="0 3 0" rotation="0 5 0"></a-entity>
      
-      <a-grid id="ground" width="200" height="200" static-body material="src: #texture-floor_two"></a-grid>
+      <a-grid id="ground" width="250" height="250" static-body material="src: #texture-floor_two"></a-grid>
       
 
      
