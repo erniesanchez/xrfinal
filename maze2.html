@@ -22,6 +22,7 @@
         <img id="texture_sky_two" src="img/sky-maze2.jpeg">
         <img id="texture-wall_two" src="img/floor2.png">
         <img id="texture-floor_two" src="img/wall2.jpeg">
+        <audio id="ambient_maze2" src="sound/maze2_sound.wav"></audio>
         <audio id="eyebeast_voice" src="sound/eyebeast_voice.mp3"></audio>
         <a-asset-item id="clock" src="models/clock_in_the_shape_of_obelisk/clock.gltf"></a-asset-item>
         <a-asset-item id="eyebeast" src="models/eyebeast/eyebeast.gltf"></a-asset-item>
@@ -40,9 +41,9 @@
                 <a-entity gltf-model="#clock" scale=".5 .5 .5" position="33.9 0 47" rotation="0 0 0"></a-entity>
                 <a-entity gltf-model="#clock" scale=".5 .5 .5" position="35 0 43.9" rotation="0 90 0"></a-entity>
       </a-entity>
-      <a-box width="1.5" height="1.5" depth="1.5" position="15 .9 30" rotation="0 130 0" material="src: #texture-wall_two">
+      <a-box  static-body width="1.5" height="1.5" depth="1.5" position="15 .9 30" rotation="0 130 0" material="src: #texture-wall_two" sound="src: #ambient_maze2; on: click">
                 <a-entity gltf-model="#eyebeast" scale="1 1 1" position="0 1.7 0" rotation="0 5 0" animation-mixer
-                sound="src: #eyebeast_voice; on: click">
+                sound="src: #eyebeast_voice; on: click"></a-entity>>
                 </a-entity>
       </a-box> 
       <a-grid id="ground" width="200" height="200" static-body material="src: #texture-floor_two"></a-grid>
