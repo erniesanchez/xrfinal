@@ -1,0 +1,11 @@
+Model Information:
+* title:	Eyebeast - Animated
+* source:	https://sketchfab.com/3d-models/eyebeast-animated-b458af2e4e6f4c61849ad4e1d69e89b1
+* author:	nodoxi (https://sketchfab.com/nodoxi)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Eyebeast - Animated" (https://sketchfab.com/3d-models/eyebeast-animated-b458af2e4e6f4c61849ad4e1d69e89b1) by nodoxi (https://sketchfab.com/nodoxi) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
