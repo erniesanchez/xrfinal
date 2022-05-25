@@ -1,0 +1,11 @@
+Model Information:
+* title:	Staggered Walk 2
+* source:	https://sketchfab.com/3d-models/staggered-walk-2-2836cf8f3a284e629ccd609137c54a04
+* author:	ayvlasov (https://sketchfab.com/ayvlasov)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Staggered Walk 2" (https://sketchfab.com/3d-models/staggered-walk-2-2836cf8f3a284e629ccd609137c54a04) by ayvlasov (https://sketchfab.com/ayvlasov) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
