@@ -27,11 +27,14 @@
         <audio id="statue_one" src="sound/statue_one.mp3"></audio>
         <audio id="statue_two" src="sound/staue_two.mp3"></audio>
         <audio id="maze_one" src="sound/ambient_maze1.wav"></audio>
+        <audio id="grumpy_voice" src="sound/grumpy.mp3"></audio>
         <a-asset-item id="sign" src="models/signboard/sign.gltf"></a-asset-item>
         <a-asset-item id="aphrodite" src="models/entrance_statue/aphrodite.gltf"></a-asset-item>
         <a-asset-item id="lion" src="models/lion_statue/lion.gltf"></a-asset-item>
         <a-asset-item id="moon" src="models/moon/moon.gltf"></a-asset-item>
         <a-asset-item id="towers" src="models/towers/towers.gltf"></a-asset-item>
+        <a-asset-item id="grumpy" src="models/grumpy/grump.gltf"></a-asset-item>
+        
       </a-assets>
       
       <a-sky src="#texture_sky"></a-sky>
@@ -61,6 +64,10 @@
       <a-box color="#000" width="6" height="25" position="-46 0 43.5" rotation="0 90 0" material="opacity: 0.0; transparent: true"
              sound="src: #maze_one; on: click" loop="true">
       </a-box>
+      <a-entity gltf-model="#grumpy" scale=".5 .5 .5" position="-40 2 -5" rotation="0 55 90">
+                <a-box static-body color="#000" width="12" height="40" depth="20" position="0 0 12" material="opacity: 0.0; transparent: true"
+                sound="src: #grumpy_voice; on: click"></a-box>
+      </a-entity>
       
      </a-scene>
   </body>
